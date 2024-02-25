@@ -32,9 +32,9 @@ def main():
     # Check if the Google_images folder exists and create it if it doesn't
     if not os.path.exists(destination_base_folder):
         os.makedirs(destination_base_folder)
-        print(f"'{destination_base_folder}' created successfully.")
+        print("Google_images folder created successfully.")
     else:
-        print(f"'{destination_base_folder}' already exists.")
+        print("Google_images folder already exists.")
 
   
 
