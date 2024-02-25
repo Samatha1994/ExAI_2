@@ -18,9 +18,9 @@ from image_processor import process_and_classify_images
 
 
 def main():
-    source_folder = r"/homes/samatha94/ExAI/outputs/config_files"
-    destination_base_folder = r"/homes/samatha94/ExAI/outputs/Google_images"
-    model_path = r"/homes/samatha94/ExAI/outputs/model_resnet50V2_10classes_retest2023June.h5"
+    source_folder = "/homes/samatha94/ExAI/outputs/config_files"
+    destination_base_folder = "/homes/samatha94/ExAI/outputs/Google_images"
+    model_path = "/homes/samatha94/ExAI/outputs/model_resnet50V2_10classes_retest2023June.h5"
     # Use the WORKSPACE environment variable to get the root directory of the Jenkins workspace
     # workspace_path = os.getenv('WORKSPACE', '')
 
