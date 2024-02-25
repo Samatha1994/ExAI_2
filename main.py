@@ -52,7 +52,7 @@ def main():
             combined_keywords = "_and_".join(keywords)  # Combine keywords for folder name
             
             # Create the destination folder for each solution
-            neuron_solution_folder = os.path.join(destination_base_folder, f'neuron_{i}', solution)
+            neuron_solution_folder = os.path.join(destination_base_folder, 'neuron_{i}', solution)
             os.makedirs(neuron_solution_folder, exist_ok=True)
 
             # Adjust download call to use combined keywords

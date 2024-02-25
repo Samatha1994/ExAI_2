@@ -65,7 +65,7 @@ def classify_images_for_solution(solution, neuron_solution_folder, model_path, n
         df['Predicted_classes'] = classes
 
         # Modify the file name to include the neuron and solution names
-        csv_file_name = f'neuron_{neuron_number}_solution_{solution}_predictions.csv'
+        csv_file_name = 'neuron_{neuron_number}_solution_{solution}_predictions.csv'
         df.to_csv(os.path.join(neuron_solution_folder, csv_file_name), index=None, header=True)
     else:
         print("No valid images found for classification in this solution.")
