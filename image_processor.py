@@ -85,7 +85,8 @@ def process_and_evaluate_images(test_directory, feature_map_model, neuron_index,
     filenames = []
     class_names = []
     if not os.path.exists(test_directory):
-        print(f"Directory {test_directory} does not exist.")
+        # print(f"Directory {test_directory} does not exist.")
+        print("Directory " + test_directory + " does not exist.")
         return
 
     for image_name in os.listdir(test_directory):
@@ -129,6 +130,7 @@ def save_results(predIdxs, class_names, filenames, csv_path):
     df['Filenames'] = filenames
     predicted_classes = list(np.argmax(predIdxs, axis=1))
     df['Predicted_classes'] = predicted_classes
-    print(f"Saving results to {csv_path}")
+    # print(f"Saving results to {csv_path}")
+    print("Saving results to " + csv_path)
     df.to_csv(csv_path, index=None, header=True)
 

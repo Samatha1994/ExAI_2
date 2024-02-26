@@ -130,7 +130,8 @@ def download_images(keyword, keyword_folder,folder_name, limit=50, api_key="AIza
                 img_response = requests.get(image_url, stream=True)
                 if img_response.status_code == 200:
                     # Naming images sequentially according to the specification
-                    image_name = f"{folder_name} {images_downloaded + 1}.jpg"
+                    # image_name = f"{folder_name} {images_downloaded + 1}.jpg"
+                    image_name = folder_name + " " + str(images_downloaded + 1) + ".jpg"
                     file_path = os.path.join(keyword_folder, image_name)
                     with open(file_path, 'wb') as f:
                         img_response.raw.decode_content = True
@@ -139,7 +140,8 @@ def download_images(keyword, keyword_folder,folder_name, limit=50, api_key="AIza
                     if images_downloaded >= limit:
                         break
             except Exception as e:
-                print(f"Failed to download {image_url}. Reason: {e}")
+                # print(f"Failed to download {image_url}. Reason: {e}")
+                print("Failed to download " + image_url + ". Reason: " + str(e))
         start_index += 10
 
 

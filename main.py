@@ -102,7 +102,8 @@ def main():
     model, layer_outputs, layer_names, feature_map_model = md.load_and_analyze_model(model_path)
     
     for i in range(2):  # For neuron indices 0 and 1
-        file_name = f"neuron_{i}_results_ecii_V2.txt"
+        # file_name = f"neuron_{i}_results_ecii_V2.txt"
+        file_name = "neuron_" + str(i) + "_results_ecii_V2.txt"
         file_path = os.path.join(source_folder, file_name)
         # print(file_path)
         solutions_keywords = extract_keywords(file_path)
