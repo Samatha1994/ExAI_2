@@ -97,15 +97,16 @@ def sanitize_filename(url):
         filename = filename.replace(char, '_')
     return filename
 
-def create_folder_structure(base_folder, neuron, solution, folder_name):
-    neuron_folder = os.path.join(base_folder, f'neuron_{neuron}')
-    solution_folder = os.path.join(neuron_folder, solution)
-    keyword_folder = os.path.join(solution_folder, folder_name.replace('_', ' '))
-    os.makedirs(keyword_folder, exist_ok=True)
-    return keyword_folder
+# def create_folder_structure(base_folder, neuron, solution, folder_name):
+#     neuron_folder = os.path.join(base_folder, f'neuron_{neuron}')
+#     solution_folder = os.path.join(neuron_folder, solution)
+#     keyword_folder = os.path.join(solution_folder, folder_name.replace('_', ' '))
+#     os.makedirs(keyword_folder, exist_ok=True)
+#     return keyword_folder
 
-def download_images(keyword, base_folder, neuron_index, solution_name, folder_name, limit=10, api_key="AIzaSyDqlNYYlxReH51VNgvCFCzfkihxhBU0uEs", cse_id="933de8d069a4a4c8e"):
-    keyword_folder = create_folder_structure(base_folder, neuron_index, solution_name, folder_name)
+def download_images(keyword, keyword_folder,folder_name, limit=50, api_key="AIzaSyDqlNYYlxReH51VNgvCFCzfkihxhBU0uEs", cse_id="933de8d069a4a4c8e"):
+# def download_images(keyword, base_folder, neuron_index, solution_name, folder_name, limit=5, api_key="AIzaSyDqlNYYlxReH51VNgvCFCzfkihxhBU0uEs", cse_id="933de8d069a4a4c8e"):
+    # keyword_folder = create_folder_structure(base_folder, neuron_index, solution_name, folder_name)
     search_url = "https://www.googleapis.com/customsearch/v1"
     params = {
         'q': keyword,
