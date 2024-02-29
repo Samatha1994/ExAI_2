@@ -116,10 +116,12 @@ def download_images(search_query, dest_folder, num_images=100):
 
 
 def main():
-    source_folder = r"C:\Users\Dell-PC\OneDrive - Kansas State University\Desktop\DataSemantics prep\ExAI_2\outputs\config_files"
-    destination_base_folder = r"C:\Users\Dell-PC\OneDrive - Kansas State University\Desktop\DataSemantics prep\ExAI_2\outputs\Google_images"
-    model_path = r"C:\Users\Dell-PC\OneDrive - Kansas State University\Desktop\DataSemantics prep\ExAI_2\outputs\model_resnet50V2_10classes_retest2023June.h5"
-    
+    # source_folder = r"C:\Users\Dell-PC\OneDrive - Kansas State University\Desktop\DataSemantics prep\ExAI_2\outputs\config_files"
+    # destination_base_folder = r"C:\Users\Dell-PC\OneDrive - Kansas State University\Desktop\DataSemantics prep\ExAI_2\outputs\Google_images"
+    # model_path = r"C:\Users\Dell-PC\OneDrive - Kansas State University\Desktop\DataSemantics prep\ExAI_2\outputs\model_resnet50V2_10classes_retest2023June.h5"
+    source_folder = "/homes/samatha94/ExAI/outputs/config_files"
+    destination_base_folder = "/homes/samatha94/ExAI/outputs/Google_images"
+    model_path = "/homes/samatha94/ExAI/outputs/model_resnet50V2_10classes_retest2023June.h5"
     if not os.path.exists(destination_base_folder):
         os.makedirs(destination_base_folder)
         print("Google_images folder created successfully.")
